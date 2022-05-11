@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grid sistemi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" >
+</head>
+<body class="container">
+<div class="baslik">
+    <div class="text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        <h1><b>bootstrap 4 grid sistemi</b></h1>
+        <h4><b>20701906 ALI MAMMADOV</b></h4>
+    </div>
+</div>
+<br>
+<div class="arakesici"><div class="container">
+</div></div>
+<div class="container">
+    <div >
+        <div>
+          <br>
+          <div><h2><b>bootstrap gird sistemi</b></h2></div>
+          <br>
+            <div><p class="genelyazi">Grid yapısında en beğendiğim özelliklerden birisi mobile-first mottosuyla geliştirilmiş olması ve bize 5 adet responsive kırılım sunması. Bu kırılımların 4 tanesinin kendi isimleri varken, en küçük ekranlar için kullanacağımız kırılımın bir ismi bulunmamakta. Yani herhangi bir kırılımı ismiyle çağırmadığımız sürece en küçük ekranlar için tasarlıyoruz diye düşüneceğiz. En küçük ekran için tasarımı belirledikten sonra eğer sitemiz daha büyük ekranlarda farklı görünsün istiyorsak, tek tek bu kırılımları belirteceğiz. Öncelikle bu 5 kırılımı ve kısaltmalarını şöyle bir tanıyalım:</p></div>
+            <table class="table table-bordered">
+              <thead class="thead-dark">
+              <tr>
+              <th></th>
+              <th>Extra Small</th>
+              <th>Small</th>
+              <th>Medium</th>
+              <th>Large</th>
+              <th>Extra Large</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+              <th class="table-dark">Kısaltma</th>
+              <td>Yok</td>
+              <td>sm</td>
+              <td>md</td>
+              <td>lg</td>
+              <td>xl</td>
+              </tr>
+              
+              <tr>
+              <th class="table-dark">Ekran Genişliği</th>
+              <td>&lt;576px</td>
+              <td>≥576px</td>
+              <td>≥768px</td>
+              <td>≥992px</td>
+              <td>≥1200px</td>
+              </tr>
+              
+              <tr>
+              <th class="table-dark">.container Genişliği</th>
+              <td>%100 (auto)</td>
+              <td>540px</td>
+              <td>720px</td>
+              <td>960px</td>
+              <td>1140px</td>
+              </tr>
+              </tbody>
+              </table>
+              <br>
+            <div class="arakesici"><div class="container"></div>
+              </div></div>
+              <br>
+              <h3 id="container-nedir"><code class="language-plaintext highlighter-rouge">.container</code> <b>Nedir?</b></h3>
+          <div><p class="genelyazi">Eğer sitemizin yatay olarak tüm ekrana yayılmasını istemiyorsak tüm HTML kodumuzu aşağıdaki gibi class özelliği container olan bir div‘in içine alabiliriz.</p></div>
+          <div class="kodarkafon">
+                <xmp>
+                  <div class="container">
+                    Geri kalan her şey buraya 
+                  </div>
+                </xmp>
+              </div>
+              <p class="genelyazi">Container içeriğin sayfanın ortasında olmasını sağlar ve genişliğini sınırlar. Yukarıdaki tabloda farklı ekran genişliklerinde container boyutunun ne kadar olduğunu görebilirsiniz. Örneğin, 576 pikselden küçük ekranlarda container ekranın tamamını kaplarken, genişliği 576 piksel ile 768 piksel arasındaki bir ekranda container 540 piksel alan kaplayıp sayfanın tam ortasında yer alacaktır.
+                Eğer içerik her zaman sayfanın tüm genişliğini kapsasın istiyorsanız, container yerine container-fluid sınıfını kullanmanız yeterli.</p>
+            </p>
+            <br>
+            <div class="arakesici"><div class="container"></div>
+          </div></div>
+          <br>
+          <div><h2><b>Satır ve Sütunlar</b></h2></div>
+          <p class="genelyazi">Grid system satır ve sütunlardan oluşur.
+
+            Satırlar row sınıfı ile oluşturulur ve sayfada alt alta görünürler. Sütunlar dışında içerik barındırmamalıdır.           
+            Satırların içerisine doğrudan sütunlar gelir. Sütunlar responsive kullanım tarzınıza bağlı olarak yan yana veya alt alta gelebilirler. Sütun oluşturmak için col, col-{boyut} veya col-{kırılım}-{boyut} sınıflarını kullanırız.           
+            Bootstrap grid sistemini kullandığınız alanı 12 eşit parçaya böler. Bu parçaları birleştirerek kullanarak sütunlarımızın genişliklerini belirleriz. Satırdaki sütunlarımızın genişliklerinin toplamı 12 olursa satırda boş alan bırakmamış oluruz.           
+            Örneğin satırımızın solunda 4 parça genişliğinde bir sütun olsun ve sağında da 8 parça genişliğinde bir sütun olsun istersek aşağıdaki gibi yazabiliriz:</p>
+          <div class="kodarkafon">
+            <xmp>
+              <div class="row">
+                <div class="col-4">Sol</div>
+                <div class="col-8">Sağ</div>
+              </div>
+            </xmp>
+          </div>
+          <p class="genelyazi">Bu şekilde yazdığımızda en küçük ekrandan en büyük ekrana kadar tüm ekranlarda sayfanın genişliğinin 4/12 kadarı sol tarafına, 8/12 kadarı sağ tarafına ayrılır.
+            Eğer extra small ve small ekranlarda sütunlar alt alta görünsün ve 100% genişlikte olsun, medium ekranlardan itibaren 4 ve 8 parça boyutlarında yan yana olsun istiyorsak, sütunları boyutlarını belirterek aşağıdaki gibi ayırabiliriz:</p>
+            </p>
+            <div class="kodarkafon">
+              <xmp>
+                <div class="row">
+                  <div class="col-md-4">Sol</div>
+                  <div class="col-md-8">Sağ</div>
+              </div>
+              </xmp>
+            </div>
+            <p class="genelyazi">Tüm sütunlar eşit genişlikte olsun istiyorsak, güzel haber, sütunların boyutlarını belirtmek zorunda değiliz. Aşağıdaki gibi yazabiliriz:</p>
+            <div class="kodarkafon">
+              <xmp>
+                  <!-- Yan yana eşit genişlikte iki sütun -->
+                  <div class="row">
+                    <div class="col">Sol</div>
+                    <div class="col">Sağ</div>
+                  </div>
+
+                  <!-- Yan yana eşit genişlikte üç sütun -->
+                  <div class="row">
+                    <div class="col">Sol</div>
+                    <div class="col">Orta</div>
+                    <div class="col">Sağ</div>
+                  </div>
+              </xmp>
+              </div>
+              <p class="genelyazi">Yine tüm sütunlar eşit genişlikte olsun fakat sadece medium ve daha büyük ekranlarda böyle olsun istiyorsanız, aşağıdaki gibi sütunları kırılım belirterek yazabilirsiniz. Bu sayede medium boyutundan daha küçük ekranlarda sütunlar alt alta gözükürler.</p>
+              <div class="kodarkafon">
+                <xmp>
+                    <!-- Medium ve daha geniş ekranlarda yan yana eşit genişlikte iki sütun -->
+                    <!-- Small ve Extra Small ekranlarda alt alta iki div -->
+                    <div class="row">
+                      <div class="col-md">Sol</div>
+                      <div class="col-md">Sağ</div>
+                    </div>
+
+                    <!-- Medium ve daha geniş ekranlarda yan yana eşit genişlikte üç sütun -->
+                    <!-- Small ve Extra Small ekranlarda alt alta üç div -->
+                    <div class="row">
+                      <div class="col-md">Sol</div>
+                      <div class="col-md">Orta</div>
+                      <div class="col-md">Sağ</div>
+                    </div>
+                </xmp>
+                </div>
+                <p class="genelyazi">Farklı kırılımları bir arada kullanabiliyoruz. Sütunumuzun her ekran boyutunda farklı bir genişliğe sahip olmasını sağlayabiliriz. Aşağıdaki örnekte soldaki sütun her ekran boyutunda farklı genişlikte olacak ve sağdaki sütun da satırda geri kalan alanı dolduracak şekilde konumlandırıldı.
+                </p>
+                <div class="kodarkafon">
+                  <xmp>
+                    <div class="row">
+                      <!-- Her çözünürlükte farklı bir genişlik tayin edildi -->
+                      <!-- Ekstra Small: 5 parça -->
+                      <!-- Small: 4 parça -->
+                      <!-- Medium: 3 parça -->
+                      <!-- Large: 2 parça -->
+                      <!-- Ekstra Large: 1 parça -->
+                      <div class="col-5 col-sm-4 col-md-3 col-lg-2 col-xl-1">Sol</div>
+                  
+                      <!-- Satırda geri kalan boş alanın tamamını kaplar -->
+                      <div class="col">Sağ</div>
+                  </div>
+                  </xmp>
+                  </div>
+                  <p class="genelyazi">Sadece bir sütunun genişliğini belirtip gerisine sadece col sınıfını verirsek, genişliği belirtilmemiş olan sütunlar kendilerine kalan alanı eşit ölçülerde paylaşırlar.</p>
+                  <div class="kodarkafon">
+                    <xmp>
+                      <div class="row">
+                        <!-- Extra small & small: (12 - 6) / 2 = 3 parça -->
+                        <!-- Medium & large & extra large: (12 - 8) / 2 = 2 parça -->
+                        <div class="col">Sol</div>
+                    
+                        <!-- Extra small & small: 6 parça -->
+                        <!-- Medium & large & extra large: 8 parça -->
+                        <div class="col-6 col-md-8">Orta</div>
+                    
+                        <!-- Extra small & small: (12 - 6) / 2 = 3 parça -->
+                        <!-- Medium & large & extra large: (12 - 8) / 2 = 2 parça -->
+                        <div class="col">Sağ</div>
+                    </div>
+                  </xmp>
+                  </div>
+                  <p class="genelyazi">Eğer bir sütunun genişliğine sütunun içeriği karar versin istiyorsak, col-auto veya col-{kırılım}-auto sınıfını kullanabiliriz. Örneğin 200 pixel genişliğinde bir içeriği tutan sütuna col-auto sınıfını verirsek bu sütun 200 pixel genişliğinde olur. Aynı satırda col sınıfına sahip bir sütun varsa o sütun da geri kalan tüm alanı doldurur.</p>
+                  <div class="kodarkafon">
+                    <xmp>
+                      <div class="row">
+                        <!-- Solda içeriğinin genişliği (200px) kadar yer kaplayan sütun -->
+                        <div class="col-auto">
+                            <div style="width:200px;">Sol</div>
+                        </div>
+                    
+                        <!-- Ortada 2 parça genişliğinde sütun -->
+                        <div class="col-2">Orta</div>
+                    
+                        <!-- Sağda kalan alanın tamamını kaplayan sütun -->
+                        <div class="col">Sağ</div>
+                    </div>
+                    </div>
+                  </xmp>
+                  </div>
+            <div>
+              <br><br>
+</body>
+</html>
